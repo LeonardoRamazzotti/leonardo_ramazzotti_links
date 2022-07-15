@@ -17,13 +17,7 @@ header {
 	flex-direction: column;
 	align-items: center;
 }
-header > img {
-	width: 6em;
-	height: 6em;
-	border-radius: 25px;
-	border: 3px  solid #fff;
-	box-shadow: red 0px 2px 12px 0px;
-}
+
 
 header > h1 {
   display: inline-block;
@@ -36,25 +30,26 @@ header > h1 {
   border: 1px solid #fffa;
 }
 
-ul {
-  margin-top: 1em;
-  text-align: middle;
+.row {
   display: flex;
-  flex-direction: column;
-  align-items: middle;
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
 
-ul > img {
-  display: inline-block;
-  width: 19.5rem;
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  width: 25em;
   height: auto;
-  border-radius: 10px;
-  border: 2px  solid #fff;
+  margin-top: 20px;
+  vertical-align: center;
+  border-radius: 25px;
+  border: 3px  solid #fff;
   box-shadow: red 0px 2px 12px 0px;
-  flex-direction: column;
-  vertical-align: middle;
-  margin-top: 2em;
-  
 }
 
 
