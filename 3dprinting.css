@@ -37,16 +37,16 @@ header > h1 {
 }
 
 ul {
-  box-sizing: border-box;
-  list-style: none;
-  margin: 0 auto;
-  padding: 2em 2em;
-  max-width: 480px;
+  margin-top: 1em;
+  text-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: middle;
 }
 
 ul > img {
   display: inline-block;
-  width: 25rem;
+  width: 19rem;
   height: auto;
   border-radius: 10px;
   border: 2px  solid #fff;
