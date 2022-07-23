@@ -1,6 +1,35 @@
 /* Global Styling */
 html, body {margin:0px; padding: 0px;}
 
+body {
+    margin: 0;
+    font-family:  'Open Sans', sans-serif;
+    background: white;
+    
+    }
+    
+    .header {
+    text-align: center;
+    padding: 32px;
+    
+    }
+    
+    .header > h1 {
+    
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 0.5em;
+    background-color: #000a;
+    color: #fff;
+    padding: 0.3em 0.6em;
+    border: 1px solid #fffa;
+    }
+    
+    .header > p {
+    color: white;
+    
+    }
+
 nav {
     background-color: #34495e;
     height: 80px;
@@ -48,7 +77,7 @@ nav {
 /* Several different images */
 .bg-one {background-image: url(./images/3dprinting5.jpg);}
 .bg-two {background-image: url(./images/volante-2.png);}
-.bg-three {background-image: url(./images/3dprinting5.jpg);}
+.bg-three {background-image: url(./images/3dprinting6.jpg);}
 .bg-four {background-image: url(./images/3dprinting6.jpg);}
 .bg-five {background-image: url(./images/3dprinting8.jpg);}
 .bg-six {background-image: url(./images/3dprinting9.jpg);}
