@@ -6,7 +6,7 @@
     width: 500%;
     margin: 0;
     left: 0;
-    animation: 20s slider infinite;
+    animation: 30s slider infinite;
     
     }
     
@@ -30,10 +30,6 @@
         60% {
             left: -300%;
         }
-        80% {
-            left: -400%;
-        }
-    
     }
     
     * {
