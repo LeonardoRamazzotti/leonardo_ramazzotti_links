@@ -103,7 +103,11 @@
         font-weight: bold;
         color: #000a;
     }
-    
+    .frontimage > img {
+        width: auto;
+	    height: 15em;       
+    }
+
     .paragraph {
         text-align: left;
     }
