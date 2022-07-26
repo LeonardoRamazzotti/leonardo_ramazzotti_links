@@ -10,6 +10,14 @@ html {
   background-size: cover;
 }
 
+body {
+  opacity: 0.2;
+  transition: opacity 1s ease-in-out;
+}
+
+body:hover {
+  opacity:1;
+}
 
 header {
 	margin-top: 1em;
