@@ -95,3 +95,22 @@ footer > h2 {
   
 
 }
+
+footer > .bgpic {
+  position: absolute;
+    left: center;
+    bottom: 0; 
+}
+
+footer > .bgpic   {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.9em;
+  color: #9a9c9b;
+
+  
+
+}
