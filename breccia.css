@@ -1,0 +1,112 @@
+html {
+  
+	margin:0;
+	padding:0;
+	font-family: 'Open Sans', sans-serif;
+  background: url("./images/bg_05-min.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  opacity: 0.2;
+  transition: opacity 1s ease-in-out;
+}
+
+body:hover {
+  opacity:1;
+}
+
+header {
+	margin-top: 1em;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+header > img {
+	width: 6em;
+	height: 6em;
+	border-radius: 25px;
+	border: 3px  solid #fff;
+	box-shadow: #9a9c9b 0px 2px 12px 0px;
+}
+
+header > h1 {
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: bold;
+  border-radius: 0.5em;
+  background-color: #000a;
+  color: #fff;
+  padding: 0.3em 0.6em;
+  border: 1px solid #fffa;
+}
+
+ul {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0 auto;
+  padding: 2em;
+  max-width: 480px;
+}
+
+ul > li {
+  background-color: #fffa;
+  backdrop-filter: blur(10px) saturate(160%) contrast(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
+  border-radius: 2em;
+  padding: 1em;
+  margin: 1.4em 0;
+	box-shadow: #9a9c9b 0px 2px 2px 2px;
+}
+
+ul > li > a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+footer {
+	margin-top: 1em;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+
+}
+
+
+footer > h2 {
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: lighter;
+  color: #cccccc;
+  
+
+}
+
+footer > .bgpic {
+  position: absolute;
+    left: center;
+    bottom: 0; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.9em;
+  color: #9a9c9b;
+
+
+}
