@@ -49,6 +49,21 @@ body {
   background-image: url(card_r.png);
 }
 
+@media only screen and (max-width: 480px) {
+
+.container {
+  width: 300px;
+  height: 464px;
+  perspective: 10000px;
+}
+
+
+.front {
+  background-image: url(card_3.png);
+}
+
+}
+
 .back {
   background-color: #3a3a3a;
   transform: rotateY(180deg);
