@@ -24,7 +24,7 @@ body {
 
 .container:hover > .card {
   cursor: pointer;
-  transform: rotateY(180deg);
+
 }
 
 
@@ -32,7 +32,7 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  transition: transform 2000ms;
+
   transform-style: preserve-3d;
 }
 
@@ -50,19 +50,7 @@ body {
   background-image: url(card_r.png);
 }
 
-.back {
-  background-color: #3a3a3a;
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-}
 
-.back {
-  background-image: url(cardr_r.png)
-}
 
 @media only screen and (max-width: 480px) {
 
@@ -77,8 +65,5 @@ body {
   background-image: url(card_3.png);
 }
 
-.back {
-  background-image: url(cardr_3.png)
 }
 
-}
