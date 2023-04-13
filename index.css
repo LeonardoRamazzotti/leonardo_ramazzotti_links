@@ -3,21 +3,11 @@ html {
 	margin:0;
 	padding:0;
 	font-family: 'Open Sans', sans-serif;
-  background: url("./images/bg_05-min.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: rgb(9,9,121);
+  background: linear-gradient(45deg, rgba(9,9,121,1) 20%, rgba(0,212,255,1) 60%);
 }
 
-body {
-  opacity: 0.2;
-  transition: opacity 1s ease-in-out;
-}
 
-body:hover {
-  opacity:1;
-}
 
 header {
 	margin-top: 1em;
@@ -57,10 +47,10 @@ ul > li {
   background-color: #fffa;
   backdrop-filter: blur(10px) saturate(160%) contrast(180%);
   -webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
-  border-radius: 2em;
+  border-radius: 1em;
   padding: 1em;
   margin: 1.4em 0;
-	box-shadow: #9a9c9b 0px 2px 2px 2px;
+	box-shadow: #9a9c9b 0px 2px 2px 1px;
 }
 
 ul > li > a {
@@ -96,19 +86,5 @@ footer > h2 {
 
 }
 
-footer > .bgpic {
-  position: absolute;
-    left: center;
-    bottom: 0; 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5em;
-  font-size: 0.9em;
-  color: #9a9c9b;
-
-
-}
 
 
