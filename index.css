@@ -19,7 +19,7 @@ header {
 header > img {
 	width: 6em;
 	height: 6em;
-	border-radius: 25px;
+	border-radius: 50px;
 	border: 3px  solid #fff;
 	box-shadow: #9a9c9b 0px 2px 12px 0px;
 }
@@ -77,9 +77,9 @@ footer {
 }
 
 
-footer > h2 {
+footer > .credit {
   display: inline-block;
-  font-size: 0.8em;
+  font-size: 0.5em;
   font-weight: lighter;
   color: #cccccc;
   
