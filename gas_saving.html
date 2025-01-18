@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Recommended meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+        <!-- CSS for examples -->
+       
+
+        <!-- This script tag bootstraps PyScript -->
+        <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+
+        <!-- for splashscreen -->
+        <style>
+            #loading { outline: none; border: none; background: transparent }
+        </style>
+        <script type="module">
+            const loading = document.getElementById('loading');
+            addEventListener('py:ready', () => loading.close());
+            loading.showModal();
+        </script>
+
+        <title>PyScript Hello World</title>
+        <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    </head>
+
+<body>
+    <div class="formbold-form-wrapper">
+      <div class="formbold-form-title">
+          <h3>Gas Savings</h3>
+          <p>Find Out The Most Convenient Gas Station Nearby</p>
+      </div>
+      <form  name="input_form" action="javascript:validate();">
+          <input
+            type="float"
+            name="delta_price"
+            id="delta"
+            placeholder="Enter the price delta ($/lt)"
+            class="formbold-form-input"
+          />
+          <input
+            type="float"
+            name="liters"
+            id="liters"
+            placeholder="Enter refill needed (lt)"
+            class="formbold-form-input"
+          />
+          <input
+            type="float"
+            name="km"
+            id="km"
+            placeholder="Enter the deviation amount (km)"
+            class="formbold-form-input"
+          />
+          <input
+            type="float"
+            name="ng"
+            id="ng"
+            placeholder="Enter the price offer by the nearest gas station ($/lt)"
+            class="formbold-form-input"
+          />
+          <input
+            type="float"
+            name="avc"
+            id="avc"
+            placeholder="Enter your fuel consumption (km/lt)"
+            class="formbold-form-input"
+          />
+
+          <input type="submit" id="btn" value="Calculate Saving">
+
+        </form>  
+
+          <p id ="output_text"></p>
+
+        <script>
+            var d, l, k, ng, avc;
+            var outputText;
+            
+            function validate() {
+            
+                // get the input
+                d = document.forms["input_form"]["delta_price"].value;
+                l = document.forms["input_form"]["liters"].value;
+                k = document.forms["input_form"]["km"].value;
+                ng = document.forms["input_form"]["ng"].value;
+                avc = document.forms["input_form"]["avc"].value;
+                
+                // validate a, b and c
+                if (d == 0) {
+                    outputText = "<em>a</em> cannot equal zero!";
+                } else if (isNaN(d)) {
+                    outputText = "<em>a</em> must be a number!";
+                } else if (isNaN(l)) {
+                    outputText = "<em>b</em> must be a number!";
+                } else if (isNaN(k)) {
+                    outputText = "<em>c</em> must be a number!";
+                } else if (isNaN(ng)) {
+                    outputText = "<em>c</em> must be a number!";
+                } else if (isNaN(avc)) {
+                    outputText = "<em>c</em> must be a number!";
+                } else {
+                    // calculate the result using x = (-b +- sqrt(b^2 - 4ac)) / 2a
+                    var s = (d*l)-(k*(ng-d)/avc);
+                    outputText = s;
+                }
+                
+                // output the result (or errors)
+                document.getElementById("output_text").innerHTML = outputText;
+            }
+        </script>
+               
+          
+
+      
+    </div>
+  </div>
+</body>
+
+  <footer>
+    <h2>Leonardo Ramazzotti</h2>
+  </footer>
+ 
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Inter", sans-serif;
+    }
+    input[type="submit"] {
+      background-color: #6A64F1;
+      border-color: none;
+      border-radius: 10px;
+      color: #ddd;
+      align-self: center;
+      padding: 16px 32px;
+      font-family: "Inter", sans-serif;
+      font-size: 2em;
+    }
+    .formbold-main-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+    }
+  
+    .formbold-form-wrapper {
+      margin: 0 auto;
+      max-width: 550px;
+      width: 100%;
+      background: white;
+    }
+  
+    .formbold-form-title {
+      margin-bottom: 40px;
+    }
+    .formbold-form-title h3 {
+      color: #07074D;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 35px;
+      width: 60%;
+      margin-bottom: 20px;
+    }
+    .formbold-form-title p {
+      font-size: 16px;
+      line-height: 24px;
+      color: #536387;
+      width: 70%;
+    }
+    .formbold-form-input {
+      text-align: center;
+      width: 100%;
+      padding: 14px 22px;
+      border-radius: 6px;
+      border: 1px solid #DDE3EC;
+      background: #FAFAFA;
+      font-weight: 500;
+      font-size: 16px;
+      color: #536387;
+      outline: none;
+      resize: none;
+      margin-bottom: 2em;
+    }
+    .formbold-form-input:focus {
+      border-color: #6a64f1;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+  
+    .formbold-btn {
+      text-align: center;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 5px;
+      padding: 14px 25px;
+      border: none;
+      font-weight: 500;
+      background-color: #6A64F1;
+      color: white;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    .formbold-btn:hover {
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    btn {
+        border: none;
+        outline: none;
+        padding: 10px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        font-size: 18px;
+        }
+        
+        .btn:hover {
+        background-color: #ddd;
+        }
+        
+        .btn.active {
+        background-color: #666;
+        color: white;
+        }
+
+    footer {
+            margin-top: 15em;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        
+        
+        }
+        
+        
+        footer > h2 {
+        display: inline-block;
+        font-size: 0.8em;
+        font-weight: lighter;
+        color: #424543;
+        
+        
+    }
+  
+  </style>
+</html>
