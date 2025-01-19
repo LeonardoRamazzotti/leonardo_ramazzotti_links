@@ -67,7 +67,7 @@
 
         </form>  
 
-          <p id ="output_text"></p>
+          <h1 id ="output_text"></h1>
 
         <script>
             var d, l, k, ng, avc;
@@ -98,7 +98,7 @@
                 } else {
                     // calculate the result using x = (-b +- sqrt(b^2 - 4ac)) / 2a
                     var s = (d*l)-(k*(ng-d)/avc);
-                    outputText = s;
+                    outputText = "You are saving "+s+" $"
                 }
                 
                 // output the result (or errors)
@@ -129,15 +129,27 @@
       font-family: "Inter", sans-serif;
     }
     input[type="submit"] {
-      background-color: #6A64F1;
-      border-color: none;
+      
+      border: none;
+      outline: none;
+      align-self: flex-end;
+      padding: 10px 16px;
       border-radius: 10px;
-      color: #ddd;
-      align-self: center;
-      padding: 16px 32px;
-      font-family: "Inter", sans-serif;
-      font-size: 2em;
-    }
+      background-color: #417be7;
+      cursor: pointer;
+      color: #ddd ;
+      font-size: 18px;
+      }
+        
+    input[type="submit"]:hover {
+      background-color:  #133cc2;
+      }
+        
+    input[type="submit"].active {
+      background-color: #133cc2;
+      color: white;
+      }
+    
     .formbold-main-wrapper {
       display: flex;
       align-items: center;
@@ -205,23 +217,13 @@
       box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
     }
 
-    btn {
-        border: none;
-        outline: none;
-        padding: 10px 16px;
-        background-color: #f1f1f1;
-        cursor: pointer;
-        font-size: 18px;
-        }
-        
-        .btn:hover {
-        background-color: #ddd;
-        }
-        
-        .btn.active {
-        background-color: #666;
-        color: white;
-        }
+    h1 {
+      margin-top: 15px;
+      display: inline-block;
+        font-size: 2em;
+        font-weight: lighter;
+        color: #424543;
+    }
 
     footer {
             margin-top: 15em;
